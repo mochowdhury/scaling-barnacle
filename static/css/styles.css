@@ -1,0 +1,91 @@
+/*
+Horizontal navigation bar from: W3 Schools: https://www.w3schools.com/css/css_navbar_horizontal.asp
+
+Grid layout from MDN Web Docs: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_Layout
+*/
+
+.content-div h1 {
+    text-align: center;
+    text-decoration: underline;
+}
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 80%;
+    width: 80%;
+    animation: linear infinite;
+}
+
+.header-div {
+    grid-area: header;
+    background: #006BA7;
+    text-align: left;
+    border-top-left-radius: .5em;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: x-large;
+}
+
+.header-div ul, .navigation-div ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.header-div a, .navigation-div a {
+    display: block;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 25px 30px;
+    text-decoration: none;
+    font-size: large;
+}
+
+.header-div li, .navigation-div li {
+    float: right;
+}
+
+.footer-div ul {
+    list-style-type: none;
+    color: #FFFFFF;
+    margin: 0;
+    overflow: hidden;
+    display: block;
+    padding: 10px 12px;
+}
+
+.footer-div li {
+
+}
+
+.main-div {
+    display: grid;
+    grid-template-areas:
+        "header navigation navigation"
+        "content content content"
+        "footer footer footer";
+    grid-template-columns: 1fr 4fr 1fr;
+}
+
+.navigation-div {
+    grid-area: navigation;
+    background: #006BA7;
+    text-align: center;
+    border-top-right-radius: .5em;
+}
+
+.content-div {
+    grid-area: content;
+    background: #f5f5dc;
+}
+
+.footer-div {
+    grid-area: footer;
+    background: #006BA7;
+    text-align: center;
+    border-bottom-left-radius: .5em;
+    border-bottom-right-radius: .5em;
+}
