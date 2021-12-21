@@ -63,6 +63,7 @@ img {
 
 .main-div {
     display: grid;
+    background: #f5f5dc;
     grid-template-areas:
         "header navigation navigation"
         "content content content"
@@ -79,7 +80,39 @@ img {
 
 .content-div {
     grid-area: content;
-    background: #f5f5dc;
+    /*background: url("../img/road-side-view.jpg");
+    overflow: hidden;*/
+    height: 80vh;
+    width: 70vw;
+    border: 1px solid black;
+    margin: 1rem auto;
+    background: url("../img/background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+}
+
+.content-road-div {
+    height: 140px;
+    width: 500%;
+    background: url("../img/surface.png");
+    position: absolute;
+    bottom: 25%;
+    animation: moveForward 5s linear infinite;
+    background-repeat: repeat-x;
+}
+
+.content-car-div {
+    height: 35vh;
+    width: 45vh;
+    position: absolute;
+    bottom: 25%;
+    left: 25%;
+}
+
+@keyframes moveForward {
+    100% {transform: translateX(-2950px)}
 }
 
 .footer-div {
